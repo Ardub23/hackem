@@ -235,6 +235,7 @@ aligntyp alignment; /* target alignment, or A_NONE */
             && (a->race == NON_PM || !race_hostile(&mons[a->race]))
             && !Hate_material(artifact_material(m))
             && !(Race_if(PM_GIANT) && (a->mtype & MH_GIANT))
+            && !(Race_if(PM_CENTAUR) && is_boots(a))
             && !(Role_if(PM_PRIEST) && (is_slash(a) || is_pierce(a)))) {
             /* when a role-specific first choice is available, use it */
             if (Role_if(a->role)) {
